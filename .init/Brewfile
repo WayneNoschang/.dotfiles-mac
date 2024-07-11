@@ -1,0 +1,21 @@
+tap "homebrew/aliases"
+tap "homebrew/autoupdate"
+tap "homebrew/bundle"
+tap "homebrew/command-not-found"
+tap "homebrew/services"
+tap "homebrew/test-bot"
+brew "autoconf"
+brew "bat"
+brew "eza"
+brew "neovim"
+brew "ruby"
+brew "shellcheck"
+brew "starship"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+cask "firefox", args: { appdir: "~/Applications" }
+cask "font-comic-shanns-mono-nerd-font"
+cask "font-sauce-code-pro-nerd-font"
+cask "font-space-mono-nerd-font"
+cask "google-chrome", args: { appdir: "~/Applications" }
+cask "iterm2", args: { appdir: "~/Applications" }

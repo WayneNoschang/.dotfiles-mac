@@ -1,0 +1,99 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$python\
+(${custom.nvm} $nodejs)\
+$character"""
+
+# right_format = """
+# $os\
+# $shell\
+# $memory_usage\
+# $battery\
+# $time\
+# """
+
+# continuation_prompt = '[∙](bright-black)'
+
+[directory]
+truncation_length = 5
+truncate_to_repo = false
+style = "purple"
+read_only = " 🔒"
+read_only_style = "bold purple"
+truncation_symbol = '…/'
+before_repo_root_style = "purple"
+repo_root_style = "underline purple"
+
+
+[character]
+success_symbol = "[](blue)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](green)"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](yellow) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+# min_time = 0
+# show_milliseconds = true
+
+[python]
+format = '[${pyenv_prefix}\((${virtualenv} )($version\) )]($style)'
+version_format = '${raw}'
+style = "bright-white"
+python_binary = ['python3', 'python']
+detect_extensions = []
+detect_folders = []
+
+
+[nodejs]
+format = '[(\($version\) )]($style)'
+version_format = '${raw}'
+detect_folders = []
+detect_extensions = []
+style = "bright-white"
+
+# 󱗘 
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ' '
+style = 'bold dimmed green'
+
+[shell]
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = false
+
+[custom.nvm]
+command = 'head -c 20 .nvmrc'
+detect_files = ['.nvmrc']
+when = ''' [[ -e $NVM_BIN ]] '''
+format = '[$output]($style)'
+style = "bright-white"

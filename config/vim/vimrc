@@ -1,0 +1,98 @@
+" A (not so) minimal vimrc:  https://github.com/mhinz/vim-galore/blob/master/static/minimal-vimrc.vim
+
+" Explicitly set Vim not vi
+set nocompatible
+
+" --------------------------------------------------------------------------------------------------
+
+" Place these files directly after 'nocompatable'.
+" Configure vim runtime files to write to XDG base directory specification.
+"   https://gist.github.com/dkasak/6ae1c6bf0d771155f23b
+"   https://tlvince.com/vim-respect-xdg
+
+if !isdirectory($XDG_CACHE_HOME . "/vim")
+    call mkdir($XDG_CACHE_HOME . "/vim")
+endif
+" set viminfo='50,<1000,s100,:0,n$XDG_CACHE_HOME/vim/viminfo
+set viminfo=""
+
+" if !isdirectory($XDG_CACHE_HOME . "/vim/backup")
+"     call mkdir($XDG_CACHE_HOME . "/vim/backup", "p")
+" endif
+" set backupdir=$XDG_CACHE_HOME/vim/backup
+set nobackup
+
+" if !isdirectory($XDG_CACHE_HOME . "/vim/undo")
+"     call mkdir($XDG_CACHE_HOME . "/vim/undo", "p")
+" endif
+" set undodir=$XDG_CACHE_HOME/vim/undo
+set noundofile
+
+if !isdirectory($XDG_CACHE_HOME . "/vim/swap")
+    call mkdir($XDG_CACHE_HOME . "/vim/swap", "p")
+endif
+set directory=$XDG_CACHE_HOME/vim/swap
+" set directory=$XDG_CACHE_HOME
+
+if !isdirectory($XDG_CACHE_HOME . "/vim/netrw")
+    call mkdir($XDG_CACHE_HOME . "/vim/netrw", "p")
+endif
+let g:netrw_home=$XDG_CACHE_HOME."/vim/netrw"
+" Use :Texplore to explore file system in a new tab (creates a .netrwhist file).
+
+" runtimepath and packpath may need to be cleaned up, duplicate files in path
+set runtimepath+=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+set packpath+=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
+" --------------------------------------------------------------------------------------------------
+
+filetype plugin indent on           " Load plugins according to detected filetype.
+syntax on                           " Enable syntax highlighting.
+set termguicolors
+
+if &background == 'dark'             " GitHub themes:
+  colorscheme github_dark_dimmed     " ->https://github.com/akiicat/vim-github-theme
+else                                 "   https://github.com/cormacrelf/vim-colors-github
+  colorscheme github_light           "   https://github.com/leviosa42/vim-github-theme
+endif
+
+" --------------------------------------------------------------------------------------------------
+" See `help :set` for more options
+ 
+set autoindent             " Indent according to previous line.
+set expandtab              " Use spaces instead of tabs.
+set softtabstop =2         " Tab key indents by 2 spaces.
+set shiftwidth  =2         " >> indents by 2 spaces.
+set shiftround             " >> indents to next multiple of 'shiftwidth'.
+
+set backspace   =indent,eol,start  " Make backspace work as you would expect.
+set hidden                         " Switch between buffers without having to save first.
+set laststatus  =2                 " Always show statusline.
+set display     =lastline          " Show as much as possible of the last line.
+
+set showmode               " Show current mode in command-line.
+set showcmd                " Show already typed keys when more are expected.
+
+set incsearch              " Highlight while searching with / or ?.
+set hlsearch               " Keep matches highlighted.
+
+set ttyfast                " Faster redrawing.
+set lazyredraw             " Only redraw when necessary.
+
+set splitright             " Open new windows right of the current window.
+set splitbelow             " Open new windows below the current window.
+
+set cursorline             " Find the current line quickly.
+set wrapscan               " Searches wrap around end-of-file.
+set report      =0         " Always report changed lines.
+set synmaxcol   =200       " Only highlight the first 200 columns.
+
+set number                 " Show line numbers
+
+" set list                   " Show non-printable characters.
+" if has('multi_byte') && &encoding ==# 'utf-8'
+"   let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+" else
+"   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
+" endif
