@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # macOS system settings
-# driesvints / dotfiles:    https://github.com/driesvints/dotfiles/blob/main/.macos
-# mathiasbynens / dotfiles: https://github.com/mathiasbynens/dotfiles/blob/main/.macos
+# macOS defaults: https://macos-defaults.com/
 # See `man defaults`
+
 
 # Stop .DS_Store on network stores
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
@@ -13,3 +13,14 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Set config directory for iTerm2
 defaults write com.googlecode.iterm2 PreferredBaseDir '~/.dotfiles/config/iterm2'
+
+
+
+# NOTE:
+ 
+# Helpful commands:
+# List all domains: `defaults domains | tr "," "\n"`
+
+# Example dotfiles:
+# driesvints macos settings:      https://github.com/driesvints/dotfiles/blob/main/.macos
+# mathiasbynens macos settings:   https://github.com/mathiasbynens/dotfiles/blob/main/.macos

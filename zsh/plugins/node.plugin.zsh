@@ -2,30 +2,36 @@
 # https://github.com/lukechilds/zsh-nvm
 
 
-# NOTE:
 # This plugin affects the following tools...
+#   Node Version Manager (nvm): https://github.com/nvm-sh/nvm
 #   NodeJS (node): https://nodejs.org/docs/latest/api/
 #   Node Package Manager (npm): https://docs.npmjs.com/
-#   Node Version Manager (nvm): https://github.com/nvm-sh/nvm
 
 
 
 # --- Parameters ---
 
-export NVM_DIR="$USER_BUILDS_HOME/nvm"          # Custom Directory
-export NVM_COMPLETION=true                      # Nvm Completion
-export NVM_LAZY_LOAD=true                       # Lazy Loading
-# export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim')   # Extra commands to trigger lazy loading
-# export NVM_NO_USE=true                        # Don't autoload node
-export NVM_AUTO_USE=true                        # Auto use
+# zsh-nvm options: https://github.com/lukechilds/zsh-nvm?tab=readme-ov-file#options
+export NVM_DIR="$USER_BUILDS_HOME/nvm"                     # Custom nvm directory
+export NVM_COMPLETION=true                                 # Bash completions for nvm
+export NVM_LAZY_LOAD=true                                  # Lazy loading, improves shell performance
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')               # Extra commands to trigger lazy loading
+# export NVM_NO_USE=true                                   # Don't autoload node, requires manually running `nvm use <version>` before using node
+export NVM_AUTO_USE=true                                   # Autoload/install required node version when entering a directory with an .nvmrc
 
-export npm_config_cache="$XDG_CACHE_HOME/npm"   # NPM cache directory
+# npm config location settings:  https://docs.npmjs.com/cli/v10/using-npm/config
+# XDG location for npm config:   https://wiki.archlinux.org/title/XDG_Base_Directory
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"  # Location of user specific .npmrc 
+# Do NOT change global npm config location when using nvm (i.e. $PREFIX or $NPM_CONFIG_GLOBALCONFIG)
+# Run `npm config ls -l | grep -i global` to find global npm config location
 
 
 
 # --- Run Commands ---
 
-# This plugin contains a single zsh script...
+# The zsh-nvm plugin is a single zsh script
+# Below is the script for zsh-nvm copied and pasted from GitHub...
+
 ZSH_NVM_DIR=${0:a:h}
 
 [[ -z "$NVM_DIR" ]] && export NVM_DIR="$HOME/.nvm"
