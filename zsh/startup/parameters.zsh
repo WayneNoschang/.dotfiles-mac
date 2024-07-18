@@ -16,4 +16,4 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"  # The history file (.zsh_history)
 export LESSHISTFILE="/dev/null"
 
 # Configure vimrc location
-export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc" 
+# export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc" 
