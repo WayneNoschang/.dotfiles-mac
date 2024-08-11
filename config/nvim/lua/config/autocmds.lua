@@ -6,22 +6,15 @@ local function augroup(name)
   return vim.api.nvim_create_augroup(name, { clear = true })
 end
 
-vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
-  group = augroup("restore_terminal_cursor"),
-  command = "set guicursor=a:ver25-blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
-})
-
 vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
   group = augroup("restore_vim_cursor"),
-  command = "set  guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
+  command = "set guicursor=n-v-c-sm:block-Cursor/lCursor,i-ci-ve:ver25-Cursor/lCursor,r-cr-o:hor20-Cursor/lCursor",
 })
 
--- vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
---   group = augroup("restore_vim_cursor"),
---   command = [[set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
---               \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
---               \,sm:block-blinkwait175-blinkoff150-blinkon175]],
--- })
+vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
+  group = augroup("restore_terminal_cursor"),
+  command = "set guicursor=a:ver25",
+})
 
 --[[ 
 See:
