@@ -1,33 +1,30 @@
 # Dotfiles for macOS
 Currently a work in progress...
 
-### Awesome lists: 
-- [Awesome shell: 	   	   ](https://github.com/alebcay/awesome-shell)
-- [Awesome CLI apps:       ](https://github.com/agarrharr/awesome-cli-apps)	
-- [Awesome ZSH plugins:	   ](https://github.com/unixorn/awesome-zsh-plugins)
-- [Awesome dev-environment:](https://github.com/sindresorhus/awesome#development-environment)
+## Goal
+1. Provide configuration for a development environment that can be cloned from GitHub
+2. Automate configuration as much as possible, provide info for what must be done manually
+3. Configuration files should be neatly organized each containing comprehensive and relevant notes.
+4. Relevant notes include code explanation, reminders, tips, and links to resources (e.g. curated lists, tutorials, docs and etc.)
 
-### Other curated lists:
-- [Starred GitHub repos:](https://github.com/stars/WayneNoschang/lists/development-environment)
-- [Terminals are sexy: 	](https://github.com/k4m4/terminals-are-sexy)
-- [Modern Unix:		    ](https://github.com/ibraheemdev/modern-unix)                           
-- [Charm cli tools: 	](https://charm.sh/)
+### Awesome lists:
+- [Awesome](https://github.com/sindresorhus/awesome)
+- [Awesome shell](https://github.com/alebcay/awesome-shell)
+- [Awesome CLI apps](https://github.com/agarrharr/awesome-cli-apps)
+- [Awesome > Development Environment](https://github.com/sindresorhus/awesome#development-environment)
 
-### ZSH help:
-- Zsh manual: `man zsh`
-- Startup files: `man zsh | less +/STARTUP`
-- [ZSH Website](https://zsh.sourceforge.io/)
-- [How to speed up zsh load time:](https://htr3n.github.io/2018/07/faster-zsh/)
+### More lists:
+- [Terminals are sexy](https://github.com/k4m4/terminals-are-sexy)
+- [Modern Unix](https://github.com/ibraheemdev/modern-unix)
+- [Charm cli tools](https://charm.sh/)
 
-### ASCII art:
-- [ASCII Fonts](https://www.asciiart.eu/text-to-ascii-art), favorites are 'Colossal', 'ANSI Shadow' and 'Standard'
-- [ASCII Tables](https://github.com/ozh/ascii-tables), creates tables for displaying data
+### ASCII tools:
+- [ASCII Art](https://www.asciiart.eu/)
+- [ASCII Fonts](https://patorjk.com/software/taag)
+- [ASCII Tables](https://github.com/ozh/ascii-tables)
 
-### Terminal themes: 
-- Current theme: [github-vscode-theme](https://github.com/cdalvaro/github-vscode-theme-iterm) 
-- Another option: [github-nvim-theme](https://github.com/projekt0n/github-theme-contrib/tree/main/themes/iterm)
-
-### CLI tips and tricks:
-- Use `touch $HOME/.hushlogin` to suppress shell login messages
-- Use `brew install --appdir=$HOME/Applications` to install cask apps for a single user
+### Favorite themes:
+- [GitHub](https://github.com/projekt0n/github-nvim-theme)
+- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [Everforest](https://github.com/sainnhe/everforest)
 

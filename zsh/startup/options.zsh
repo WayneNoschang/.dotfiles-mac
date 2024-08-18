@@ -1,13 +1,12 @@
-# Zsh options: https://zsh.sourceforge.io/Doc/Release/Options.html
-# Moving to zsh: Shell Options
+# Zsh options: `man zshoptions`
 
-# Man page: `man zshoptions`
 # List all options: `set -o`
 # Use `emulate -LR zsh` to revert options to default settings
 #     This can be useful to add at the beginning of zsh scripts
 
 setopt nobeep                  # Beep on error in ZLE.
 setopt autocd                  # If command issued is a directory, perform the cd command to that directory.
+setopt nocaseglob              # Make filename generation (globbing and tab-completion) case insensitive.
 # setopt autolist              # Automatically list choices on an ambiguous completion.
 # setopt automenu              # Automatically use menu completion after the second consecutive request for completion (overridden by MENU_COMPLETE).
 # setopt autopushd             # Make cd push the old directory onto the directory stack.

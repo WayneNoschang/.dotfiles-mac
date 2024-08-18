@@ -2,3 +2,4 @@
 # All other files in this folder will be ignored.
 *
 !.gitignore
+!colors
