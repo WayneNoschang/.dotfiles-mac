@@ -3,3 +3,4 @@
 *
 !.gitignore
 !colors/
+!colors/**
