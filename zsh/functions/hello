@@ -1,15 +1,19 @@
+emulate -L zsh  # Place this at the top of a function file to avoid user configuration or parameter expansion.
 # Let's again assume that these are the contents of a file called "hello".
 
-# You may run arbitrary code in here, that will run the first time the
-# function is referenced. Commonly, that is initialisation code. For example
-# the `_tmux' completion function does exactly that.
-# echo initialising...
-sleep 7s
+# You may run arbitrary code in here, 
+#   it will run the first time the function is referenced. 
+# Commonly, that is initialisation code. 
+# For example, the `_tmux' completion function does exactly that.
 
-# You may also define additional functions in here. Note, that these
-# functions are visible in global scope, so it is paramount to take
-# care when you're naming these so you do not shadow existing commands or
-# redefine existing functions.
+# echo 'initialising...'
+sleep 5s
+
+# You may also define additional functions in here. 
+# Note, that these functions are visible in global scope. 
+# So it is paramount to take care when you're naming these so
+#   you do not shadow existing commands or redefine existing functions.
+
 hello_helper_one () {
    printf 'Hello'
 }
@@ -19,17 +23,15 @@ hello_helper_two () {
 }
 
 # Now you should redefine the "hello" function (which currently contains
-# all the code from the file) to something that covers its actual
-# functionality. After that, the two helper functions along with the core
-# function will be defined and visible in global scope.
+# all the code from the file) to something that covers its actual functionality. 
+# After that, the two helper functions along with the core
+#   function will be defined and visible in global scope.
 hello () {
   sleep 5s
   printf '%s %s\n' "$(hello_helper_one)" "$(hello_helper_two)"
 }
 
-# Finally run the redefined function with the same arguments as the current
-# run. If this is left out, the functionality implemented by the newly
-# defined "hello" function is not executed upon its first call. So:
+# Finally run the redefined function with the same arguments as the current run. 
+# If this is left out, the functionality implemented by the newly
+#   defined "hello" function is not executed upon its first call. So:
 hello "$@"
-
-# It's a good idea to put 'emulate -L zsh' at the top of your function file to avoid user configuration or parameter expansion.

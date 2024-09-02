@@ -1,6 +1,6 @@
 # zsh-completions > Additional completion definitions for zsh
 # https://github.com/zsh-users/zsh-completions
-# https://docs.brew.sh/Shell-Completion
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 
 
 # --- Run Commands ---

@@ -10,8 +10,6 @@ fi
 
 
 
-
-
 # --- Startup files ($ZDOTDIR/startup) ---
 for startup_file in "${ZDOTDIR:-$HOME}"/startup/*.zsh(N); do
   source "${startup_file}"
@@ -27,14 +25,13 @@ done
 
 
 # --- Functions ($ZDOTDIR/functions) ---
-fpath+=($ZDOTDIR/functions) 
+fpath+=($ZDOTDIR/functions)
+autoload -Uz ${fpath[-1]}/*(:t)
 
 
 
 # --- Other configurations ---
-# ...
-
-
+test -e "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh && source "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh
 
 
 
@@ -42,6 +39,7 @@ fpath+=($ZDOTDIR/functions)
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zprof
 fi
+
 
 
 # NOTES
