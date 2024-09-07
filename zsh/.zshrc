@@ -31,7 +31,7 @@ autoload -Uz ${fpath[-1]}/*(:t)
 
 
 # --- Other configurations ---
-test -e "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh && source "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh
+# test -e "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh && source "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh
 
 
 

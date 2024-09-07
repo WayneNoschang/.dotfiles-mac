@@ -25,8 +25,8 @@ symbol = ' '
 [directory]  # https://starship.rs/config/#directory
 style = 'purple'
 truncation_length = 3
-truncation_symbol = '…/'
-read_only = '󰒙'
+truncation_symbol = "/"
+read_only = ''
 home_symbol = '⌂'
 read_only_style = 'red'
 repo_root_style = 'italic underline purple'

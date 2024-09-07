@@ -28,3 +28,16 @@ Currently a work in progress...
 - [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - [Everforest](https://github.com/sainnhe/everforest)
 
+### Favorite fonts:
+- [Source Code Pro (Adobe font)](https://adobe-fonts.github.io/source-code-pro/)
+- [San Francisco   (Apple font)](https://developer.apple.com/fonts/)
+- [Monaspace       (GitHub font)](https://monaspace.githubnext.com/)
+- [Cascadia Code   (Windows font)](https://github.com/microsoft/cascadia-code)
+- [Recursive Mono](https://www.recursive.design/)
+- [Iosevka](https://typeof.net/Iosevka/)
+
+### Components
+- Terminal emulator: [iTerm2](https://iterm2.com/)
+- Shell: [Zsh](https://zsh.sourceforge.io/)
+- Code editor: [Neovim](https://neovim.io/)
+

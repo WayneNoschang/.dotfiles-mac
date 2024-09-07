@@ -171,8 +171,8 @@ fi
 
 # iTerm2 utilities
 # https://iterm2.com/documentation-utilities.html
-for it2_utility in ${ZDOTDIR}/terminal/utilities/*(N:t); do
-  alias "$it2_utility"=${ZDOTDIR}/terminal/utilities/${it2_utility}
+for it2_utility in ${XDG_CONFIG_HOME}/iterm2/utilities/*(N:t); do
+  alias "$it2_utility"=${XDG_CONFIG_HOME}/iterm2/utilities/${it2_utility}
 done
 
 
