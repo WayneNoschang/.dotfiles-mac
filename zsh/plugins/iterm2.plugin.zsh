@@ -1,4 +1,4 @@
-# iTerm2 shell integration
+# iTerm2 > A terminal emulator for macOS
 # https://iterm2.com/documentation-shell-integration.html
 
 
