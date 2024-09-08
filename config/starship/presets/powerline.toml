@@ -1,0 +1,147 @@
+format = """
+[](color_black)\
+([ ](bg:color_black)$directory[ ](bg:color_black))\
+[](fg:color_black bg:color_bright_black)\
+([ ](bg:color_bright_black)$git_branch${custom.git_status}[ ](bg:color_bright_black))\
+[](fg:color_bright_black bg:color_white)\
+([ ](bg:color_white)$python[ ](bg:color_white))\
+([ ](bg:color_white)$nodejs[ ](bg:color_white))\
+$character\
+"""
+
+continuation_prompt = " "
+
+right_format = """
+($cmd_duration[ ](fg:color_bright_white))\
+($docker_context[ ](fg:color_bright_white))\
+($jobs[ ](fg:color_bright_white))\
+($memory_usage[ ](fg:color_bright_white))\
+($time[ ](fg:color_bright_white))\
+"""
+
+palette = 'colors'
+
+[palettes.colors]
+color_black         = 'black'
+color_bright_black  = 'bright-black'
+color_true_white    = '#ffffff'
+color_red           = 'red'
+color_bright_red    = 'bright-red'
+color_green         = 'green'
+color_bright_green  = 'bright-green'
+color_yellow        = 'yellow'
+color_bright_yellow = 'bright-yellow'
+color_blue          = 'blue'
+color_bright_blue   = 'bright-blue'
+color_purple        = 'purple'
+color_bright_purple = 'bright-purple'
+color_cyan          = 'cyan'
+color_bright_cyan   = 'bright-cyan'
+color_white         = 'white'
+color_bright_white  = 'bright-white'
+color_true_black    = '#000000'
+
+
+
+#######################
+##### Left Prompt #####
+#######################
+
+
+# Part 1 - print working directory
+
+[directory]
+style = "bg:color_black fg:color_bright_white"
+format = "[$path]($style)"
+truncation_length = 3
+truncation_symbol = '…/'
+
+# ------------------------------------------------------------------------
+
+# Part 2 - git info
+
+[git_branch]
+symbol = ""
+style = "bg:color_bright_black fg:color_bright_white"
+format = '[$symbol $branch]($style)'
+
+[custom.git_status]
+command      = 'echo \*'
+style        = "bg:color_bright_black fg:color_bright_white"
+format       = '[$output]($style)'
+when         = ''' test -n "$(git status -s)" '''
+require_repo = true
+description  = 'Notifier for (git status -s)'
+shell        = ['zsh']
+os           = 'macos'
+
+# ------------------------------------------------------------------------
+
+# Part 3 - language info
+
+[python]
+format = '[${pyenv_prefix}\((${virtualenv} )($version\))]($style)'
+version_format = '${raw}'
+style = "fg:color_black bg:color_black"
+python_binary = ['python3', 'python']
+detect_extensions = []
+detect_folders = []
+
+[nodejs]
+format = '[$symbol( $version)]($style)'
+style = "fg:color_black bg:color_white"
+symbol = ''
+version_format = '${raw}'
+detect_extensions = []
+
+# ------------------------------------------------------------------------
+
+# Part 4 - prompt character
+
+[character]
+success_symbol = "[](fg:color_white bg:color_blue)[](fg:color_blue)"
+error_symbol =   "[](fg:color_white bg:color_red)[](fg:color_red)"
+vimcmd_symbol =  "[](fg:color_white bg:color_green)[](fg:color_green)"
+
+# ------------------------------------------------------------------------
+
+
+
+########################
+##### Right Prompt #####
+########################
+
+
+
+# All modules
+
+[jobs]  # https://starship.rs/config/#jobs
+symbol = '+'
+number_threshold = 2  # Show the number of jobs if the job count is at least number_threshold.
+symbol_threshold = 4  # Show symbol if the job count is at least symbol_threshold.
+style = 'fg:color_bright_white bg:color_bright_black'
+format = '[](color_bright_black)[$symbol$number]($style)[](color_bright_black)'
+
+[memory_usage]  # https://starship.rs/config/#memory-usage
+format = '[](color_bright_black)[$symbol ${ram_pct}( | ${swap_pct})]($style)[](color_bright_black)'
+disabled = false
+threshold = -1
+symbol = "󰧑"
+style = 'bg:color_bright_black fg:color_bright_white'
+
+[time]  # https://starship.rs/config/#time
+disabled = false
+time_format = "%I:%M%P"
+style = "bg:color_bright_black fg:color_bright_white"
+format = '[](color_bright_black)[ $time]($style)[](color_bright_black)'
+
+[cmd_duration]  # https://starship.rs/config/#command-duration
+format = '[](color_bright_black)[$duration]($style)[](color_bright_black)'
+style = 'fg:color_bright_white bg:color_bright_black'
+show_milliseconds = true
+min_time = 0
+
+[docker_context]  # https://starship.rs/config/#docker-context
+format = '[](color_bright_black)[ $context]($style)[](color_bright_black)'
+style = 'fg:color_bright_white bg:color_bright_black'
+

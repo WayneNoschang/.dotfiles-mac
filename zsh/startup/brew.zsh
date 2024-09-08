@@ -14,7 +14,9 @@ export HOMEBREW_INSTALL_BADGE="󱄖"     # The “Beer Mug” emoji shown before
 # export HOMEBREW_BAT_CONFIG_PATH=""  # Set bat theme for syntax highlighting
 
 
-# NOTE:
-# Homebrew completions handled by `completions.plugin.zsh`
+# NOTES
+
+# Reminders
+# Homebrew completions handled by `../plugins/completions.plugin.zsh` file
 # See `man brew | less +/ENVIRONMENT` for available environment variables
 # Use `brew install --appdir=$HOME/Applications` to install cask apps for a single user

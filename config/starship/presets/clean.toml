@@ -1,0 +1,117 @@
+# Starship configuration     https://starship.rs/config/
+# Nerd font icons (useful)   https://www.nerdfonts.com/cheat-sheet
+
+format = """
+$directory\
+$git_branch\
+${custom.git_status}\
+$git_status\
+$cmd_duration\
+$fill\
+($docker_context[ | ](fg:bright-black))\
+($python[ | ](fg:bright-black))\
+($nodejs[ | ](fg:bright-black))\
+($jobs[ | ](fg:bright-black))\
+($memory_usage[ | ](fg:bright-black))\
+$time \
+$line_break\
+$character"""
+
+[fill]
+symbol = ' '
+
+# -----------------------------------------------
+
+[directory]  # https://starship.rs/config/#directory
+style = 'purple'
+truncation_length = 3
+truncation_symbol = "/"
+read_only = ''
+home_symbol = '⌂'
+read_only_style = 'red'
+repo_root_style = 'italic underline purple'
+before_repo_root_style = 'purple'
+truncate_to_repo = true
+format = '[$read_only]($read_only_style)[$path]($style) '
+
+[character]
+success_symbol = '[󰪥](blue)'
+error_symbol = '[󰻃](red)'
+vimcmd_symbol = '[⊽](blue)'
+
+# -----------------------------------------------
+
+[git_branch]  # https://starship.rs/config/#git-branch
+format = '[$branch](bright-black)'
+
+[git_status]  # https://starship.rs/config/#custom-commands
+format = '[($ahead_behind$stashed)](cyan)'
+stashed    = '≡'
+
+[custom.git_status]  # https://starship.rs/config/#custom-commands
+command      = 'echo \⦁'
+format       = '[$output](cyan)'
+when         = ''' test -n "$(git status -s)" '''
+require_repo = true
+description  = 'Notifier for (git status -s)'
+shell        = ['zsh']
+os           = 'macos'
+
+[git_state]  # https://starship.rs/config/#git-state
+disabled = true
+format = '\([$state( $progress_current/$progress_total)](bright-black)\) '
+
+# -----------------------------------------------
+
+[cmd_duration]  # https://starship.rs/config/#command-duration
+format = '[ $duration](yellow)'
+min_time = 2000
+
+# -----------------------------------------------
+
+
+
+########################
+##### Right Prompt #####
+########################
+
+[docker_context]  # https://starship.rs/config/#docker-context
+format = '[ $context]($style)'
+style  = 'bright-black'
+
+[python]  # https://starship.rs/config/#python
+version_format = 'v${raw}'
+python_binary  = ['python3', 'python']
+format = '[(${pyenv_prefix}) (\(${virtualenv}\)) ( $version)](bright-black)'
+
+[nodejs]  # https://starship.rs/config/#node-js
+version_format    = 'v${raw}'
+detect_folders    = []
+detect_extensions = []
+format = '[( $version)](bright-black)'
+
+[lua]  # https://starship.rs/config/#lua
+disabled       = true
+version_format = 'v${raw}'
+format = '[(󰢱 $version)](bright-black)'
+
+# -----------------------------------------------
+
+[jobs]  # https://starship.rs/config/#jobs
+disabled = false
+symbol   = '+'
+format   = '[$symbol$number](bright-black)'
+number_threshold = 2  # Show the number of jobs if the job count is at least number_threshold.
+symbol_threshold = 4  # Show symbol if the job count is at least symbol_threshold.
+
+[memory_usage]  # https://starship.rs/config/#memory-usage
+disabled  = false
+threshold = 90
+symbol    = '󰧑'
+format    = '[$symbol ${ram_pct}( | ${swap_pct})](bright-black)'
+
+[time]  # https://starship.rs/config/#time
+disabled    = false
+time_format = '%I:%M%P'
+format      = '[$time](bright-black)'
+
