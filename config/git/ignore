@@ -11,7 +11,7 @@
 # Visual Studio Code
 # Zsh
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -27,12 +27,12 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Homebrew ###
 Brewfile.lock.json
 
-
+#-----------------------------------------------------------------------------------------
 
 ### macOS ###
 # General
@@ -61,14 +61,14 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-
+#-----------------------------------------------------------------------------------------
 
 ### SSH ###
 **/.ssh/id_*
 **/.ssh/*_id_*
 **/.ssh/known_hosts
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Vim ###
 # Swap
@@ -89,7 +89,7 @@ tags
 # Persistent undo
 [._]*.un~
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Visual Studio Code ###
 **/vscode/*
@@ -110,7 +110,7 @@ tags
 .history
 .ionide
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Zsh ###
 # Zsh compiled script + zrecompile backup
@@ -139,3 +139,11 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
+#-----------------------------------------------------------------------------------------
+
+### Neovim ###
+
+# Ignore nvim config directory.
+# Use a different dirname for each nvim config project.
+# Symlink nvim directory to desired config directory.
+nvim

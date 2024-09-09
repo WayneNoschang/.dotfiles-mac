@@ -7,37 +7,20 @@ Currently a work in progress...
 3. Configuration files should be neatly organized each containing comprehensive and relevant notes.
 4. Relevant notes include code explanation, reminders, tips, and links to resources (e.g. curated lists, tutorials, docs and etc.)
 
-### Awesome lists:
-- [Awesome](https://github.com/sindresorhus/awesome)
+### Community resources:
+- [Awesome](https://github.com/sindresorhus/awesome) > [Development Environment](https://github.com/sindresorhus/awesome#development-environment)
 - [Awesome shell](https://github.com/alebcay/awesome-shell)
 - [Awesome CLI apps](https://github.com/agarrharr/awesome-cli-apps)
-- [Awesome > Development Environment](https://github.com/sindresorhus/awesome#development-environment)
-
-### More lists:
 - [Terminals are sexy](https://github.com/k4m4/terminals-are-sexy)
 - [Modern Unix](https://github.com/ibraheemdev/modern-unix)
-- [Charm cli tools](https://charm.sh/)
-
-### ASCII tools:
-- [ASCII Art](https://www.asciiart.eu/)
-- [ASCII Fonts](https://patorjk.com/software/taag)
-- [ASCII Tables](https://github.com/ozh/ascii-tables)
-
-### Favorite themes:
-- [GitHub](https://github.com/projekt0n/github-nvim-theme)
-- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
-- [Everforest](https://github.com/sainnhe/everforest)
-
-### Favorite fonts:
-- [Source Code Pro (Adobe font)](https://adobe-fonts.github.io/source-code-pro/)
-- [San Francisco   (Apple font)](https://developer.apple.com/fonts/)
-- [Monaspace       (GitHub font)](https://monaspace.githubnext.com/)
-- [Cascadia Code   (Windows font)](https://github.com/microsoft/cascadia-code)
-- [Recursive Mono](https://www.recursive.design/)
-- [Iosevka](https://typeof.net/Iosevka/)
+- [Charm CLI tools](https://charm.sh/)
 
 ### Components
 - Terminal emulator: [iTerm2](https://iterm2.com/)
 - Shell: [Zsh](https://zsh.sourceforge.io/)
 - Code editor: [Neovim](https://neovim.io/)
 
+### Extras
+- Useful tools for generating ASCII [Art](https://www.asciiart.eu/), [Fonts](https://patorjk.com/software/taag) and [Tables](https://github.com/ozh/ascii-tables)
+- Favorite color scheme is [GitHub](https://github.com/projekt0n/github-nvim-theme)
+- Favorite nerd font is [SauceCodePro (Source Code Pro)](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro)
