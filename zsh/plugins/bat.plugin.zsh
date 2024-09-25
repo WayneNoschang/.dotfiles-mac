@@ -4,9 +4,6 @@
 
 # --- Parameters ---
 
-# bat dark/light mode: https://github.com/sharkdp/bat?tab=readme-ov-file#dark-mode
-export BAT_MODE="defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo 'GitHub-Dark' || echo 'GitHub-Light'"
-
 # Set bat config directory (not config path): https://github.com/sharkdp/bat/issues/2890
 export BAT_CONFIG_DIR="$XDG_CONFIG_HOME/bat"
 
@@ -14,7 +11,8 @@ export BAT_CONFIG_DIR="$XDG_CONFIG_HOME/bat"
 
 # --- Aliases ---
 
-alias bat="bat --theme=\$($BAT_MODE)"
+# bat dark/light mode: https://github.com/sharkdp/bat?tab=readme-ov-file#dark-mode
+alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo 'GitHub-Dark' || echo 'GitHub-Light')"
 
 
 
