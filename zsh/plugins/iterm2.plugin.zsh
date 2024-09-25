@@ -182,5 +182,6 @@ done
 
 # example of a user defined variable called "gitBranch"
 iterm2_print_user_vars() {
-  iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
+  iterm2_set_user_var gitBranch $(git branch --show-current 2> /dev/null)
+  iterm2_set_user_var gitStatus $(test -n "$(git status -s 2> /dev/null)" && echo "⦁")
 }
