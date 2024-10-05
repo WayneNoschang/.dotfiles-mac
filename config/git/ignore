@@ -91,4 +91,6 @@ Temporary Items
 # Ignore nvim config directory.
 # Use a different dirname for each nvim config project.
 # Symlink nvim directory to desired config directory.
-nvim*
+config/*nvim*
+.config/*nvim*
+
