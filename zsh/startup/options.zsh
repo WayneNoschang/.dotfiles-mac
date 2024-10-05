@@ -1,9 +1,6 @@
 # Zsh options: `man zshoptions`
 
-# List all options: `set -o`
-# Use `emulate -LR zsh` to revert options to default settings
-#     This can be useful to add at the beginning of zsh scripts
-
+# Basic options
 setopt nobeep                  # Beep on error in ZLE.
 setopt autocd                  # If command issued is a directory, perform the cd command to that directory.
 setopt nocaseglob              # Make filename generation (globbing and tab-completion) case insensitive.
@@ -26,3 +23,11 @@ setopt histsavenodups          # Do not write a duplicate event to the history f
 setopt histverify              # Do not execute immediately upon history expansion.
 setopt appendhistory           # append to history file
 setopt histnostore             # Don't store history commands
+
+# NOTES
+
+# List all options: `set -o`
+
+# Use `emulate -LR zsh` to revert options to default settings
+#     This can be useful to add at the beginning of zsh scripts
+

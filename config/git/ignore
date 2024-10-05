@@ -7,11 +7,9 @@
 # Homebrew
 # macOS
 # SSH
-# Vim
-# Visual Studio Code
 # Zsh
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -27,12 +25,12 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
-
+#-----------------------------------------------------------------------------------------
 
 ### Homebrew ###
 Brewfile.lock.json
 
-
+#-----------------------------------------------------------------------------------------
 
 ### macOS ###
 # General
@@ -61,56 +59,14 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-
+#-----------------------------------------------------------------------------------------
 
 ### SSH ###
 **/.ssh/id_*
 **/.ssh/*_id_*
 **/.ssh/known_hosts
 
-
-
-### Vim ###
-# Swap
-[._]*.s[a-v][a-z]
-!*.svg  # comment out if you don't need vector files
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
-# Session
-Session.vim
-Sessionx.vim
-# Temporary
-.netrwhist
-*~
-# Auto-generated tag files
-tags
-# Persistent undo
-[._]*.un~
-
-
-
-### Visual Studio Code ###
-**/vscode/*
-!**/vscode/settings.json
-!**/vscode/tasks.json
-!**/vscode/launch.json
-!**/vscode/extensions.json
-!**/vscode/*.code-snippets
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
-
-### Visual Studio Code Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
-
+#-----------------------------------------------------------------------------------------
 
 ### Zsh ###
 # Zsh compiled script + zrecompile backup
@@ -124,18 +80,15 @@ tags
 .zsh_sessions
 # Zsh zcalc history
 .zcalc_history
-# A popular plugin manager's files
-._zinit
-.zinit_lstupd
-# zdharma/zshelldoc tool's files
-zsdoc/data
-# robbyrussell/oh-my-zsh/plugins/per-directory-history plugin's files
-# (when set-up to store the history in the local directory)
-.directory_history
-# MichaelAquilina/zsh-autoswitch-virtualenv plugin's files
-# (for Zsh plugins using Python)
-.venv
 # Zunit tests' output
 /tests/_output/*
 !/tests/_output/.gitkeep
 
+#-----------------------------------------------------------------------------------------
+
+### Neovim ###
+
+# Ignore nvim config directory.
+# Use a different dirname for each nvim config project.
+# Symlink nvim directory to desired config directory.
+nvim*
