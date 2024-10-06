@@ -4,6 +4,7 @@
 setopt nobeep                  # Beep on error in ZLE.
 setopt autocd                  # If command issued is a directory, perform the cd command to that directory.
 setopt nocaseglob              # Make filename generation (globbing and tab-completion) case insensitive.
+setopt ignoreeof               # Don't exit on end-of-file (Ctrl-D), use 'exit' or 'logout' instead. However, ten consecutive EOFs will cause the shell to exit anyway.   
 # setopt autolist              # Automatically list choices on an ambiguous completion.
 # setopt automenu              # Automatically use menu completion after the second consecutive request for completion (overridden by MENU_COMPLETE).
 # setopt autopushd             # Make cd push the old directory onto the directory stack.
@@ -21,8 +22,8 @@ setopt histfindnodups          # Do not display a previously found event.
 setopt histignorespace         # Do not record an event starting with a space.
 setopt histsavenodups          # Do not write a duplicate event to the history file.
 setopt histverify              # Do not execute immediately upon history expansion.
-setopt appendhistory           # append to history file
-setopt histnostore             # Don't store history commands
+setopt appendhistory           # append to history file.
+setopt histnostore             # Don't store history commands.
 
 # NOTES
 

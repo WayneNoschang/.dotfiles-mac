@@ -20,13 +20,14 @@ $character"""
 [fill]
 symbol = ' '
 
+
 # -----------------------------------------------
 
 [directory]  # https://starship.rs/config/#directory
 style = 'purple'
 truncation_length = 3
 truncation_symbol = "/"
-read_only = ''
+read_only = '!'
 home_symbol = '⌂'
 read_only_style = 'red'
 repo_root_style = 'italic underline purple'
@@ -34,10 +35,12 @@ before_repo_root_style = 'purple'
 truncate_to_repo = true
 format = '[$read_only]($read_only_style)[$path]($style) '
 
+#  bash,  zsh,  vimcmd
+
 [character]
-success_symbol = '[󰪥](blue)'
-error_symbol = '[󰻃](red)'
-vimcmd_symbol = '[⊽](blue)'
+success_symbol = '[](blue)'
+error_symbol = '[](red)'
+vimcmd_symbol = ''
 
 # -----------------------------------------------
 

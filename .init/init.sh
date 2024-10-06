@@ -27,6 +27,8 @@ brew bundle                                 # Bundle packages in adjacent Brewfi
 [[ -d $XDG_DATA_HOME/zsh ]]   || mkdir -p $XDG_DATA_HOME/zsh 
 [[ -d $XDG_CONFIG_HOME/zsh ]] || mkdir -p $XDG_CONFIG_HOME/zsh 
 
+# --- local binary directory ---
+[[ -d $HOME/.local/bin ]] || mkdir -p $HOME/.local/bin
 
 
 # --- Project folders ---

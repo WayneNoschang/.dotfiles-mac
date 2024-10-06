@@ -171,11 +171,24 @@ fi
 
 # iTerm2 utilities
 # https://iterm2.com/documentation-utilities.html
-for it2_utility in ${XDG_CONFIG_HOME}/iterm2/utilities/*(N:t); do
-  alias "$it2_utility"=${XDG_CONFIG_HOME}/iterm2/utilities/${it2_utility}
-done
 
+# for it2_utility in ${XDG_CONFIG_HOME}/iterm2/utilities/*(N:t); do
+#   alias "$it2_utility"=${XDG_CONFIG_HOME}/iterm2/utilities/${it2_utility}
+# done
 
+if [[ -d $XDG_CONFIG_HOME/iterm2/utilities ]] && [[ -d $HOME/.local/bin ]] 
+then
+  for util in $XDG_CONFIG_HOME/iterm2/utilities/*
+  do
+    if ! command -v $(basename $util) &> /dev/null
+    then 
+      ln -s $util $HOME/.local/bin/$(basename $util)
+    fi
+  done
+else
+  echo "iterm2 shell integration: Make sure \$HOME/.local/bin exists and is in PATH"
+  echo "iterm2 shell integration: Download iterm2 utilities and place under \$XDG_CONFIG_HOME/iterm2/utilities"
+fi
 
 # iTerm2 scripts
 # https://iterm2.com/documentation-scripting-fundamentals.html
@@ -184,4 +197,5 @@ done
 iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $(git branch --show-current 2> /dev/null)
   iterm2_set_user_var gitStatus $(test -n "$(git status -s 2> /dev/null)" && echo "⦁")
+  iterm2_set_user_var getTTY    $(basename $TTY)
 }

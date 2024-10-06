@@ -1,14 +1,14 @@
-# Aliases for builtin commands and pre-installed applications
+# Aliases for builtin and pre-installed commands
+# Alias command: `man zshbuiltins`
+# Aliasing: `man zshmisc`
 
-
-# ZSH aliasing: https://zsh.sourceforge.io/Doc/Release/Shell-Grammar.html#Aliasing
 # Moving to zsh: Aliases and Functions
 
 
-
 # Readable PATH and FPATH output
-alias lpath='echo $PATH | tr ":" "\n"'
+alias lpath='echo $path | tr " " "\n"'
 alias lfpath='echo $fpath | tr " " "\n"'
+alias lcdpath='echo $cdpath | tr " " "\n"'
 
 # Zsh startup speed test
 alias ztest="time ZSH_DEBUGRC=1 zsh -i -c exit"

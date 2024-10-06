@@ -1,11 +1,9 @@
 # Environment variables for shell and core utilities.
-
-
-# Zsh intro - variables index: https://zsh.sourceforge.io/Intro/intro_19.html
-
+# Zsh parameters: `man zshparam`
 
 
 # --- Zsh ---
+cdpath+=($ZDOTDIR $XDG_CONFIG_HOME)
 export HISTFILE="$XDG_STATE_HOME/zsh/history"  # The history file (.zsh_history) to save when an interactive shell exits
 
 
