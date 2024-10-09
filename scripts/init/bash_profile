@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[[ -f $HOME/.dotfiles/.init/bashrc ]] && source $HOME/.dotfiles/.init/bashrc
+
+# Difference between bash startup files: https://superuser.com/questions/183870/difference-between-bashrc-and-bash-profile
+# How to add a PATH: https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path

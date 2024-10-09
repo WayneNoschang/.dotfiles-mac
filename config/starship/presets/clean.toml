@@ -8,6 +8,7 @@ ${custom.git_status}\
 $git_status\
 $cmd_duration\
 $fill\
+($shell[ | ](fg:bright-black))\
 ($docker_context[ | ](fg:bright-black))\
 ($python[ | ](fg:bright-black))\
 ($nodejs[ | ](fg:bright-black))\
@@ -38,9 +39,9 @@ format = '[$read_only]($read_only_style)[$path]($style) '
 #  bash,  zsh,  vimcmd
 
 [character]
-success_symbol = '[](blue)'
-error_symbol = '[](red)'
-vimcmd_symbol = ''
+success_symbol = '[](blue)'
+error_symbol   = '[](red)'
+vimcmd_symbol  = '[](green)'
 
 # -----------------------------------------------
 
@@ -52,7 +53,7 @@ format = '[($ahead_behind$stashed)](cyan)'
 stashed    = '≡'
 
 [custom.git_status]  # https://starship.rs/config/#custom-commands
-command      = 'echo \⦁'
+command      = 'echo \°'
 format       = '[$output](cyan)'
 when         = ''' test -n "$(git status -s)" '''
 require_repo = true
@@ -77,6 +78,12 @@ min_time = 2000
 ########################
 ##### Right Prompt #####
 ########################
+
+[shell]
+disabled = false
+bash_indicator = 'Bash'
+zsh_indicator = 'Zsh'
+format = '[$indicator](bright-black)'
 
 [docker_context]  # https://starship.rs/config/#docker-context
 format = '[ $context]($style)'

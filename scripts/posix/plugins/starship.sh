@@ -1,3 +1,4 @@
+#!/bin/sh
 # starship > Cross-shell prompt for astronauts
 # https://starship.rs
 
