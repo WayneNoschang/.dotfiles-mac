@@ -9,37 +9,35 @@ if [[ -n "$ZSH_DEBUGRC" ]]; then
 fi
 
 
-
-# --- Startup files ($ZDOTDIR/startup) ---
-for startup_file in "${ZDOTDIR:-$HOME}"/startup/*.zsh(N); do
-  source "${startup_file}"
+# --- POSIX startup files ---
+for sh_startup_file in $USER_SCRIPTS_HOME/startup/*.sh(N); do
+  source $sh_startup_file
 done
 
-
-
-# --- Plugins ($ZDOTDIR/plugins) ---
-for plugin_file in "${ZDOTDIR:-$HOME}"/plugins/*.zsh(N); do
-  source "${plugin_file}"
+# --- $ZDOTDIR/startup files ---
+for zsh_startup_file in "${ZDOTDIR:-$HOME}"/startup/*.zsh(N); do
+  source "${zsh_startup_file}"
 done
 
+# --- POSIX plugin files ---
+for sh_plugin_file in $USER_SCRIPTS_HOME/plugins/*.sh(N); do
+  source "$sh_plugin_file"
+done
 
+# --- $ZDOTDIR/plugins files ---
+for zsh_plugin_file in "${ZDOTDIR:-$HOME}"/plugins/*.zsh(N); do
+  source "${zsh_plugin_file}"
+done
 
 # --- Functions ($ZDOTDIR/functions) ---
 fpath+=($ZDOTDIR/functions)
 autoload -Uz ${fpath[-1]}/*(:t)
 
 
-
-# --- Other configurations ---
-# test -e "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh && source "${ZDOTDIR:-$HOME}"/terminal/shell_integration.zsh
-
-
-
 # --- Zsh speed test record ---
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zprof
 fi
-
 
 
 # NOTES

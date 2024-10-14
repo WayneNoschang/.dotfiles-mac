@@ -5,12 +5,6 @@
 
 # --- Run Commands ---
 
-if type brew &> /dev/null
-then
-  fpath+=($HOMEBREW_PREFIX/share/zsh/site-functions)  # Homebrew completions
-  fpath+=($HOMEBREW_PREFIX/share/zsh-completions)     # Zsh-users completions
-fi
-
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION  # Specify which dumpfile to use
 

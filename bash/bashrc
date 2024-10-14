@@ -6,7 +6,7 @@ case $- in
 *) return ;;
 esac
 
-[[ -f "$HOME/.dotfiles/.init/xdg.sh" ]] && source "$HOME/.dotfiles/.init/xdg.sh"
+[[ -f "$HOME/.config/scripts/xdg.sh" ]] && source "$HOME/.config/scripts/xdg.sh"
 export BASH_IT="$USER_BUILDS_HOME/bash_it" # Path to the bash it configuration
 export BASH_IT_THEME=''                    # Lock and Load a custom theme file, location: /.bash_it/themes/
 
@@ -62,8 +62,18 @@ source "$BASH_IT"/bash_it.sh
 # --- End of Bash It Config ---
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-# Starship
-source $HOME/.dotfiles/zsh/plugins/starship.plugin.zsh
+# --- POSIX startup files ---
+for sh_startup_file in $USER_SCRIPTS_HOME/startup/*.sh; do
+  source $sh_startup_file
+done
+
+# --- POSIX plugin files ---
+for sh_plugin_file in $USER_SCRIPTS_HOME/plugins/*.sh; do
+  source $sh_plugin_file
+done
+
+# --- Bash plugin files ---
+for bash_plugin_file in $USER_SHELL_HOME/plugins/*.sh; do
+  source $bash_plugin_file
+done

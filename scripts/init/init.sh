@@ -31,12 +31,12 @@ brew bundle              # Bundle packages in adjacent Brewfile
 [[ -d $HOME/.config/zsh ]] || mkdir -p $HOME/.config/zsh
 [[ -d $HOME/.cache/zsh ]] || mkdir -p $HOME/.cache/zsh
 
-[[ -d $HOME/.zshrc ]] && rm -rf $HOME/.zshrc         # Remove .zshrc from $HOME
-ln -s "$HOME/.dotfiles/.init/zshenv" "$HOME/.zshenv" # Symlink .zshenv to zsh dotfiles
+[[ -d $HOME/.zshrc ]] && rm -rf $HOME/.zshrc     # Remove .zshrc from $HOME
+ln -s "$HOME/.config/zsh/zshenv" "$HOME/.zshenv" # Symlink .zshenv to zsh dotfiles
 
 # --- Bash ---
-[[ -d $HOME/.bash_profile ]] && rm -rf $HOME/.bash_profile      # Remove .bash_profile from $HOME
-ln -s "$HOME/.dotfiles/.init/bash_profile" "$HOME/bash_profile" # Symlink .bash_profile to .init/bash_profile
+[[ -d $HOME/.bash_profile ]] && rm -rf $HOME/.bash_profile   # Remove .bash_profile from $HOME
+ln -s "$HOME/.config/bash/bash_profile" "$HOME/bash_profile" # Symlink .bash_profile to .config/bash/bash_profile
 
 # --- Project folders ---
 mkdir -p $HOME/Projects/compsci $HOME/Projects/webdev $HOME/Projects/python $HOME/Projects/node $HOME/Projects/shell

@@ -4,7 +4,6 @@
 # macOS defaults: https://macos-defaults.com/
 # See `man defaults`
 
-
 # Stop .DS_Store on network stores
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
@@ -12,12 +11,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Set config directory for iTerm2
-defaults write com.googlecode.iterm2 PreferredBaseDir '~/.dotfiles/config/iterm2'
-
-
+defaults write com.googlecode.iterm2 PreferredBaseDir '~/.config/iterm2'
 
 # NOTE:
- 
+
 # Helpful commands:
 # List all domains: `defaults domains | tr "," "\n"`
 
