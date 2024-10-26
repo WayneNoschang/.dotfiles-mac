@@ -40,9 +40,9 @@ format = '[$path]($style) '
 #  bash,  zsh,  vimcmd
 
 [character]
-success_symbol = '[](blue)'
-error_symbol   = '[](red)'
-vimcmd_symbol  = '[](green)'
+success_symbol = '[](blue)'
+error_symbol   = '[](red)'
+vimcmd_symbol  = '[󰌓](white)'
 
 # -----------------------------------------------
 
@@ -88,7 +88,7 @@ min_time = 2000
 ########################
 
 [shell]
-disabled = false
+disabled = true
 bash_indicator = 'Bash'
 zsh_indicator = 'Zsh'
 format = '[$indicator](bright-black)'

@@ -1,5 +1,5 @@
 #!/bin/sh
-# bat > Clone of cat(1) with syntax highlighting and Git integration
+# bat > Clone of 'cat' with syntax highlighting and Git integration
 # https://github.com/sharkdp/bat
 
 # --- Parameters ---

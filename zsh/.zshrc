@@ -1,7 +1,5 @@
+#!/usr/bin/env zsh
 # .zshrc > Startup file sourced for interactive shells
-# Man page:  `man zsh`
-# Official website:  https://zsh.sourceforge.io/
-
 
 # --- Zsh speed test start ---
 if [[ -n "$ZSH_DEBUGRC" ]]; then
@@ -10,13 +8,13 @@ fi
 
 
 # --- POSIX startup files ---
-for sh_startup_file in $USER_SCRIPTS_HOME/startup/*.sh(N); do
-  source $sh_startup_file
+for sh_setup_file in $USER_SCRIPTS_HOME/setup/*.sh(N); do
+  source $sh_setup_file
 done
 
 # --- $ZDOTDIR/startup files ---
-for zsh_startup_file in "${ZDOTDIR:-$HOME}"/startup/*.zsh(N); do
-  source "${zsh_startup_file}"
+for zsh_setup_file in "${ZDOTDIR:-$HOME}"/setup/*.zsh(N); do
+  source "${zsh_setup_file}"
 done
 
 # --- POSIX plugin files ---
@@ -30,8 +28,8 @@ for zsh_plugin_file in "${ZDOTDIR:-$HOME}"/plugins/*.zsh(N); do
 done
 
 # --- Functions ($ZDOTDIR/functions) ---
-fpath+=($ZDOTDIR/functions)
-autoload -Uz ${fpath[-1]}/*(:t)
+fpath=($ZDOTDIR/functions $fpath)
+autoload -Uz ${fpath[1]}/*(:t)
 
 
 # --- Zsh speed test record ---
@@ -50,3 +48,6 @@ fi
 
 # Reminders
 # Add a file named `$HOME/.hushlogin` to suppress shell login messages
+
+
+# man 'zsh manpage' | col -bx | perl helpfiles

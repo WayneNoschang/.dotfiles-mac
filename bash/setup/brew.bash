@@ -5,14 +5,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)" # Homebrew on arm64
 
 if type brew &> /dev/null
 then
-  if [[ $(basename $SHELL) = 'zsh' ]]
-  then
-    fpath+=($HOMEBREW_PREFIX/share/zsh/site-functions)  # Homebrew completions
-    fpath+=($HOMEBREW_PREFIX/share/zsh-completions)     # Zsh-users completions
-  elif [[ $(basename $SHELL) = 'bash' ]]
-  then
-    [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-  fi
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 fi
 
 # --- Parameters ---

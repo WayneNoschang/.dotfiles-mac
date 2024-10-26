@@ -35,12 +35,17 @@ brew bundle              # Bundle packages in adjacent Brewfile
 ln -s "$HOME/.config/zsh/zshenv" "$HOME/.zshenv" # Symlink .zshenv to zsh dotfiles
 
 # --- Bash ---
-[[ -d $HOME/.bash_profile ]] && rm -rf $HOME/.bash_profile   # Remove .bash_profile from $HOME
-ln -s "$HOME/.config/bash/bash_profile" "$HOME/bash_profile" # Symlink .bash_profile to .config/bash/bash_profile
+
+[[ -d $HOME/.local/share/bash ]] || mkdir -p $HOME/.local/share/bash
+[[ -d $HOME/.local/state/bash ]] || mkdir -p $HOME/.local/state/bash
+[[ -d $HOME/.config/bash ]] || mkdir -p $HOME/.config/bash
+[[ -d $HOME/.cache/bash ]] || mkdir -p $HOME/.cache/bash
+
+[[ -d $HOME/.bash_profile ]] && rm -rf $HOME/.bash_profile    # Remove .bash_profile from $HOME
+ln -s "$HOME/.config/bash/bash_profile" "$HOME/.bash_profile" # Symlink .bash_profile to .config/bash/bash_profile
 
 # --- Project folders ---
-mkdir -p $HOME/Projects/compsci $HOME/Projects/webdev $HOME/Projects/python $HOME/Projects/node $HOME/Projects/shell
-# Create above using a for-loop
+mkdir -p $HOME/Projects/compsci $HOME/Projects/webdev $HOME/Projects/python $HOME/Projects/node $HOME/Projects/shell # Create above using a for-loop
 
 # Clone Github repositories
 # ./clone.sh

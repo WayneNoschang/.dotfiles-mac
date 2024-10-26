@@ -1,0 +1,37 @@
+# Readline init config
+#   Readline is customized by putting commands in an initialization file (the inputrc file).  
+#   Default file name is ~/.inputrc or a value from INPUTRC variable. The system default is /etc/inputrc.
+#   Readline configuration can also be done in a .bashrc file using the 'bind' command (e.g. `bind '"\e[3~": delete-char'`).
+#   When a program which uses the readline library starts up, inputrc is read and executed.
+#   See `man bash` and search for 'READLINE' or visit https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
+
+#   There are only a few basic constructs allowed in the readline initialization file.  
+#     Blank lines are ignored.
+#     Lines beginning with a # are comments.
+#     Lines beginning with a $ indicate conditional constructs.
+#     Other lines denote key bindings and variable settings.
+
+# -- Readline Variables --
+
+# set editing-mode vi
+set colored-stats on
+
+# set bell-style visible
+# set colored-completion-prefix on
+# set completion-ignore-case on
+# set completion-map-case on
+# set show-mode-in-prompt on
+
+
+# Keybindings
+"\e[3~": delete-char
+
+
+# NOTES
+# Use `bind -p` to get a list of the current keymap's keybindings.
+# Use `bind -m` to refer to a specific keymap (e.g. `bind -m emacs -p).
+# Unbound commands are commented out (#).
+
+
+# https://unix.stackexchange.com/questions/154399/hex-codes-for-input-key-combinations
+# "\x7f": backward-delete-char  # keybinding with 2 digit hex code.

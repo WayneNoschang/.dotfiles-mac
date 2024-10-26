@@ -1,10 +1,8 @@
 # Aliases for builtin and pre-installed commands
-# Alias command: `man zshbuiltins`
-# Aliasing: `man zshmisc`
+# Alias command: `man zshbuiltins` and aliasing: `man zshmisc`
 
-# Moving to zsh: Aliases and Functions
 
-alias it2delcolors='defaults delete com.googlecode.iterm2 "Custom Color Presets"'
+alias zref='open $ZDOTDIR/zsh-reference-card.pdf'
 
 # Readable PATH and FPATH output
 # alias lpath='for path_dir in $path; do; \ls $path_dir &> /dev/null && echo $path_dir; done; path_dir=""'

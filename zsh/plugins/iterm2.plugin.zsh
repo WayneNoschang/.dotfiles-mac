@@ -1,5 +1,6 @@
 # iTerm2 > A terminal emulator for macOS
 # https://iterm2.com/documentation-shell-integration.html
+# https://github.com/gnachman/iTerm2-shell-integration/tree/main/shell_integration
 
 
 if [[ -o interactive ]]; then
@@ -167,14 +168,12 @@ if [[ -o interactive ]]; then
   fi
 fi
 
+# ------------------------------------------------------------------------------------------------------------------------------
 
+# Custom settings
 
 # iTerm2 utilities
 # https://iterm2.com/documentation-utilities.html
-
-# for it2_utility in ${XDG_CONFIG_HOME}/iterm2/utilities/*(N:t); do
-#   alias "$it2_utility"=${XDG_CONFIG_HOME}/iterm2/utilities/${it2_utility}
-# done
 
 if [[ -d $XDG_CONFIG_HOME/iterm2/utilities ]] && [[ -d $HOME/.local/bin ]] 
 then
@@ -199,3 +198,6 @@ iterm2_print_user_vars() {
   iterm2_set_user_var gitStatus $(test -n "$(git status -s 2> /dev/null)" && echo "⦁")
   iterm2_set_user_var getTTY    $(basename $TTY)
 }
+
+# Aliases
+alias it2delcolors='defaults delete com.googlecode.iterm2 "Custom Color Presets"'
