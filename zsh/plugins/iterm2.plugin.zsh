@@ -1,3 +1,4 @@
+#!/usr/bin/env $SHELL
 # iTerm2 > A terminal emulator for macOS
 # https://iterm2.com/documentation-shell-integration.html
 # https://github.com/gnachman/iTerm2-shell-integration/tree/main/shell_integration
@@ -201,3 +202,4 @@ iterm2_print_user_vars() {
 
 # Aliases
 alias it2delcolors='defaults delete com.googlecode.iterm2 "Custom Color Presets"'
+alias icat='it2cat'

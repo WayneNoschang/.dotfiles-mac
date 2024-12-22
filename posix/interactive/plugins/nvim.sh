@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # neovim > hyperextensible Vim-based text editor
 # https://neovim.io/
 

@@ -7,10 +7,12 @@
 # Set bat config directory (not config path): https://github.com/sharkdp/bat/issues/2890
 export BAT_CONFIG_DIR="$XDG_CONFIG_HOME/bat"
 
-# --- Aliases ---
-
-# bat dark/light mode: https://github.com/sharkdp/bat?tab=readme-ov-file#dark-mode
-alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo 'GitHub-Dark' || echo 'GitHub-Light')"
+# Dark/light mode: https://github.com/sharkdp/bat?tab=readme-ov-file#dark-mode
+if defaults read -globalDomain AppleInterfaceStyle &> /dev/null; then
+  export BAT_THEME="primer"
+else
+  export BAT_THEME="primer-light"
+fi
 
 # NOTES:
 # Use `\bat cache --build` when building cache. The backslash escape character negates aliases

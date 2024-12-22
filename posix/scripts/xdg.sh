@@ -9,10 +9,14 @@ export XDG_CACHE_HOME="$HOME/.cache"       # Non-essential and re-creatable data
 
 # --- Additional directories ---
 
-PATH="$HOME/.local/bin:$PATH"                    # Add local binary folder to PATH
-export USER_BUILDS_HOME="$HOME/.local/builds"    # Contains packages built from source (i.e. plugins/packages without brew support).
-export USER_SCRIPTS_HOME="$HOME/.config/scripts" # Contains scripts and files for automating transition to a new machine.
-export USER_SHELL_HOME="$HOME/.config/$(basename $SHELL)"
+PATH="$HOME/.local/bin:$PATH"                 # Add local binary folder to PATH
+export USER_BUILDS_HOME="$HOME/.local/builds" # Contains packages built from source (i.e. plugins/packages without brew support).
+
+export USER_INTERACTIVE_HOME="$HOME/.config/shell/interactive"  # Scripts to be sourced within interactive (rc) files.
+export USER_SCRIPTS_HOME="$HOME/.config/shell/scripts"          # Scripts to be sourced on any shell invocation.
+export USER_INTERPRETER_HOME="$HOME/.config/$(basename $SHELL)" # Shell config directory
+
+# NOTES
 
 #      Where to put a file?         DATA   CONFIG   STATE   CACHE   RUNTIME
 #  ------------------------------- ------ -------- ------- ------- ---------

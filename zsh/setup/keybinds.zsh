@@ -13,8 +13,8 @@ bindkey '\e[3~' delete-char   # delete key
 bindkey '\eq' push-line-or-edit
 
 bindkey -as '\C-xz' 'invim ~/.config/zsh/\C-M' # Bind string to vicmd
-bindkey -s '\C-xz' 'nvim ~/.config/zsh/' 
-bindkey -M emacs -s '\C-xz' 'nvim ~/.config/zsh/' 
+bindkey -s '\C-xz' 'nvim ~/.config/zsh/'
+bindkey -M emacs -s '\C-xz' 'nvim ~/.config/zsh/'
 
 # The 'zle' command is used for creating extensions to the editor.
 # Use `zle -la` to list all available widgets.

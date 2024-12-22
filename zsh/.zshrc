@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# .zshrc > Startup file sourced for interactive shells
+# .zshrc > interactive shells
 
 # --- Zsh speed test start ---
 if [[ -n "$ZSH_DEBUGRC" ]]; then
@@ -8,7 +8,7 @@ fi
 
 
 # --- POSIX startup files ---
-for sh_setup_file in $USER_SCRIPTS_HOME/setup/*.sh(N); do
+for sh_setup_file in $XDG_CONFIG_HOME/posix/interactive/setup/*.sh(N); do
   source $sh_setup_file
 done
 
@@ -18,7 +18,7 @@ for zsh_setup_file in "${ZDOTDIR:-$HOME}"/setup/*.zsh(N); do
 done
 
 # --- POSIX plugin files ---
-for sh_plugin_file in $USER_SCRIPTS_HOME/plugins/*.sh(N); do
+for sh_plugin_file in $XDG_CONFIG_HOME/posix/interactive/plugins/*.sh(N); do
   source "$sh_plugin_file"
 done
 

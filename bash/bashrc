@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bashrc > interactive non-login
+# bashrc > interactive non-login shells
 
 # If not running interactively, don't do anything
 case $- in
@@ -7,26 +7,26 @@ case $- in
 *) return ;;
 esac
 
-[[ -f "$HOME/.config/scripts/xdg.sh" ]] && source "$HOME/.config/scripts/xdg.sh"
+[[ -f "$HOME/.config/shell/scripts/xdg.sh" ]] && source "$HOME/.config/shell/scripts/xdg.sh"
 [[ -f $XDG_CONFIG_HOME/bash/bash_it ]] && source $XDG_CONFIG_HOME/bash/bash_it
 
 # --- POSIX startup files ---
-for setup_script in $USER_SCRIPTS_HOME/setup/*.sh; do
+for setup_script in $XDG_CONFIG_HOME/posix/interactive/setup/*.sh; do
   source $setup_script
 done
 
 # --- Bash startup files ---
-for bash_setup_file in $USER_SHELL_HOME/setup/*.bash; do
+for bash_setup_file in $XDG_CONFIG_HOME/bash/setup/*.bash; do
   source $bash_setup_file
 done
 
 # --- POSIX plugin files ---
-for sh_plugin_file in $USER_SCRIPTS_HOME/plugins/*.sh; do
+for sh_plugin_file in $XDG_CONFIG_HOME/posix/interactive/plugins/*.sh; do
   source $sh_plugin_file
 done
 
 # --- Bash plugin files ---
-for bash_plugin_file in $USER_SHELL_HOME/plugins/*.sh; do
+for bash_plugin_file in $XDG_CONFIG_HOME/bash/plugins/*.bash; do
   source $bash_plugin_file
 done
 

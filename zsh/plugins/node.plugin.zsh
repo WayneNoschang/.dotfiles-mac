@@ -1,3 +1,4 @@
+#!/usr/bin/env $SHELL
 # zsh-nvm > Zsh plugin for installing, updating and loading nvm
 # https://github.com/lukechilds/zsh-nvm
 

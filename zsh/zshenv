@@ -1,4 +1,5 @@
 #!/bin/zsh
+# zshenv > all shells
 
 # Symlink from $HOME/.zshenv (target file).
 export ZDOTDIR=$HOME/.config/zsh
@@ -8,6 +9,6 @@ export ZDOTDIR=$HOME/.config/zsh
 # It should contain commands to set the command search path, plus other important environment variables.
 # It should NOT contain commands that produce output or assume the shell is attached to a tty.
 
-source "$HOME/.config/scripts/xdg.sh"  # Environment variables for XDG base directories
+source "$HOME/.config/shell/scripts/xdg.sh"  # Environment variables for XDG base directories
 export SHELL_SESSIONS_DISABLE=1        # Disables .zsh_sessions folder created by Apple terminal
 

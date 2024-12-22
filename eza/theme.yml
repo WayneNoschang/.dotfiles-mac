@@ -1,0 +1,113 @@
+# https://github.com/eza-community/eza?tab=readme-ov-file#custom-themes
+# https://github.com/eza-community/eza-themes
+
+colourful: true
+
+filekinds:
+  normal:       {foreground: Default}
+  directory:    {foreground: Default, is_bold: true, is_dimmed: true}
+  symlink:      {foreground: Default, is_italic: true, is_dimmed: true}
+  executable:   {foreground: Red, is_bold: false}
+  pipe:         {foreground: Cyan, is_bold: false}
+  special:      {foreground: Cyan, is_bold: false}
+  block_device: {foreground: Cyan, is_bold: false}
+  char_device:  {foreground: Cyan, is_bold: false}
+  socket:       {foreground: Cyan, is_bold: false}
+  mount_point:  {foreground: Yellow, is_underline: false, is_bold: true}
+
+perms:
+  user_read:          {foreground: Default, is_bold: false}
+  user_write:         {foreground: Blue, is_bold: false}
+  user_execute_file:  {foreground: Red, is_bold: false, is_underline: false}
+  user_execute_other: {foreground: Red, is_bold: false}
+  group_read:         {foreground: Default}
+  group_write:        {foreground: Blue}
+  group_execute:      {foreground: Red}
+  other_read:         {foreground: Default}
+  other_write:        {foreground: Blue}
+  other_execute:      {foreground: Red}
+  special_user_file:  {foreground: Purple}
+  special_other:      {foreground: Purple}
+  attribute:          {foreground: Default}
+
+size:
+  major:       {foreground: Blue, is_bold: false}
+  minor:       {foreground: Blue}
+  number_byte: {foreground: Blue, is_bold: false}
+  number_kilo: {foreground: Blue, is_bold: false}
+  number_mega: {foreground: Blue, is_bold: false}
+  number_giga: {foreground: Blue, is_bold: false}
+  number_huge: {foreground: Blue, is_bold: false}
+  unit_byte:   {foreground: Blue}
+  unit_kilo:   {foreground: Blue}
+  unit_mega:   {foreground: Blue}
+  unit_giga:   {foreground: Blue}
+  unit_huge:   {foreground: Blue}
+
+users:
+  user_you:    {foreground: Default, is_bold: false}
+  user_root:   {foreground: Default}
+  user_other:  {foreground: Default}
+  group_yours: {foreground: Default, is_bold: false}
+  group_other: {foreground: Default}
+  group_root:  {foreground: Default}
+
+links:
+  normal:          {foreground: LightBlue, is_bold: false}
+  multi_link_file: {foreground: Black, background: LightBlue}
+
+git:
+  new:        {foreground: Default}
+  ignored:    {foreground: Default, is_dimmed: true}
+  deleted:    {foreground: Red}
+  modified:   {foreground: Blue}
+  renamed:    {foreground: Blue}
+  typechange: {foreground: Blue}
+  conflicted: {foreground: Yellow}
+
+git_repo:
+  branch_main:  {foreground: Default}
+  branch_other: {foreground: Defalut}
+  git_clean:    {foreground: Default}
+  git_dirty:    {foreground: Default}
+
+security_context:
+  colon: {foreground: Default, is_dimmed: true}
+  user:  {foreground: Blue}
+  role:  {foreground: Green}
+  typ:   {foreground: Yellow}
+  range: {foreground: LightBlue}
+
+file_type:
+  image:      {foreground: Default}
+  video:      {foreground: Default, is_bold: false}
+  music:      {foreground: Default}
+  lossless:   {foreground: Default, is_bold: false}
+  crypto:     {foreground: Default, is_bold: false}
+  document:   {foreground: Default}
+  compressed: {foreground: Default, is_dimmed: true}
+  temp:       {foreground: Default, is_dimmed: true}
+  compiled:   {foreground: LightBlue}
+  build:      {foreground: LightBlue, is_bold: false, is_underline: false}
+  source:     {foreground: LightBlue, is_bold: false}
+
+punctuation: {foreground: Default, is_bold: false, is_dimmed: true}
+date:        {foreground: Blue}
+inode:       {foreground: Default, is_underline: false}
+blocks:      {foreground: Default}
+header:      {foreground: Default, is_underline: false, is_bold: true}
+octal:       {foreground: Default}
+flags:       {foreground: Default}
+
+symlink_path:        {foreground: Default, is_dimmed: true, is_bold: true}
+control_char:        {foreground: Default}
+broken_symlink:      {foreground: Default, is_dimmed: true}
+broken_path_overlay: {foreground: Red, is_underline: false, is_dimmed: false, is_strikethrough: true}
+
+filenames:
+  # Custom filename-based overrides
+  # Cargo.toml: {icon: {glyph: 🦀}}
+
+extensions:
+  # Custom extension-based overrides
+  # rs: {filename: {foreground: Red}, icon: {glyph: 🦀}}
