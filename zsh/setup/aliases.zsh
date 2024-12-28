@@ -1,7 +1,6 @@
 # Aliases for builtin and pre-installed commands
 # Alias command: `man zshbuiltins` and aliasing: `man zshmisc`
 
-
 alias zref='open $ZDOTDIR/zsh-reference-card.pdf'
 
 # Readable PATH and FPATH output

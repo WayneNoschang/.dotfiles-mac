@@ -4,7 +4,6 @@
 
 # --- Parameters ---
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza
-# EZA_COLORS  # eza config file
 
 # --- Aliases ---
 

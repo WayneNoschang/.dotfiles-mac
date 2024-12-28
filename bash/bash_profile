@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# bash_profile > login shells
+# bash_profile > login shell
 
 [[ -f $HOME/.config/bash/bashrc ]] && source $HOME/.config/bash/bashrc

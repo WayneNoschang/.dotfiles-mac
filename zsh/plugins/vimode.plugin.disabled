@@ -1,0 +1,5 @@
+#!/usr/bin/env $SHELL
+# zsh-vi-mode > A better vi mode for Zsh
+# https://github.com/jeffreytse/zsh-vi-mode
+
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh

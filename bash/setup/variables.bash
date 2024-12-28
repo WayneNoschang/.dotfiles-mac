@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env $SHELL
 
 # Environment variables
-export INPUTRC=$USER_SHELL_HOME/setup/inputrc
-export HISTFILESIZE=1000
+export INPUTRC=$USER_SHELL_HOME/setup/inputrc # Readline editor config file location

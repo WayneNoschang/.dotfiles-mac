@@ -16,16 +16,17 @@ fi
 # --- Parameters ---
 
 # Styles:
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=magenta
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=4,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=4,underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=4,bold
+ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=5
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=none
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=red
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=1
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=blue
 
 # Style options:
 # ZSH_HIGHLIGHT_STYLES[process-substitution]=none                       # ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
-# ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold                       # ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
+# ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold                       
 # ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none                       # ZSH_HIGHLIGHT_STYLES[named-fd]=none
 # ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue                                # ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
 # ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none                       # ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
