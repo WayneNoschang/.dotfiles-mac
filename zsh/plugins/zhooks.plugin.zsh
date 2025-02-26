@@ -1,3 +1,4 @@
+#!/usr/bin/env $SHELL
 # Zhooks > Display all Zsh hook arrays and functions
 # https://github.com/agkozak/zhooks
 

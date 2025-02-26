@@ -1,5 +1,7 @@
+#!/usr/bin/env $SHELL
 # iTerm2 > A terminal emulator for macOS
 # https://iterm2.com/documentation-shell-integration.html
+# https://github.com/gnachman/iTerm2-shell-integration/tree/main/shell_integration
 
 
 if [[ -o interactive ]]; then
@@ -166,22 +168,3 @@ if [[ -o interactive ]]; then
     printf "\033]1337;ShellIntegrationVersion=14;shell=zsh\007"
   fi
 fi
-
-
-
-# iTerm2 utilities
-# https://iterm2.com/documentation-utilities.html
-for it2_utility in ${XDG_CONFIG_HOME}/iterm2/utilities/*(N:t); do
-  alias "$it2_utility"=${XDG_CONFIG_HOME}/iterm2/utilities/${it2_utility}
-done
-
-
-
-# iTerm2 scripts
-# https://iterm2.com/documentation-scripting-fundamentals.html
-
-# example of a user defined variable called "gitBranch"
-iterm2_print_user_vars() {
-  iterm2_set_user_var gitBranch $(git branch --show-current 2> /dev/null)
-  iterm2_set_user_var gitStatus $(test -n "$(git status -s 2> /dev/null)" && echo "⦁")
-}

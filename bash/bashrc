@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# bashrc > interactive non-login shell
+
+# If not running interactively, don't do anything
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
+[[ -f "$HOME/.config/posix/scripts/xdg.sh" ]] && source "$HOME/.config/posix/scripts/xdg.sh"
+[[ -f $XDG_CONFIG_HOME/bash/bash_it ]] && source $XDG_CONFIG_HOME/bash/bash_it
+
+# --- POSIX startup files ---
+for setup_script in $XDG_CONFIG_HOME/posix/interactive/setup/*.sh; do
+  source $setup_script
+done
+
+# --- Bash startup files ---
+for bash_setup_file in $XDG_CONFIG_HOME/bash/setup/*.bash; do
+  source $bash_setup_file
+done
+
+# --- POSIX plugin files ---
+for sh_plugin_file in $XDG_CONFIG_HOME/posix/interactive/plugins/*.sh; do
+  source $sh_plugin_file
+done
+
+# --- Bash plugin files ---
+for bash_plugin_file in $XDG_CONFIG_HOME/bash/plugins/*.bash; do
+  source $bash_plugin_file
+done
+
+# # Run different shell commands for login/non-login shells
+# if shopt -q login_shell; then
+# # (use .bash_logout file)
+# else
+# # non-login code (e.g. `trap '. ~/.bash_logout' EXIT`)
+# fi

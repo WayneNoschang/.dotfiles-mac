@@ -1,0 +1,8 @@
+# Git will track this file and its containing folder only.
+# All other files in this folder will be ignored.
+*
+
+# Exceptions
+!.gitignore
+!utilities/
+!utilities/**

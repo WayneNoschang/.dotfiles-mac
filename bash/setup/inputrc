@@ -1,0 +1,41 @@
+# Readline init config
+#   Readline is a GNU standard library for handling command line editing.
+#   Readline is customized by putting commands in an initialization file (inputrc).  
+#   Default file name is ~/.inputrc or a value from INPUTRC variable. The system default is /etc/inputrc.
+#   Readline configuration can also be done in a .bashrc file using the 'bind' command (e.g. `bind '"\e[3~": delete-char'`).
+#   When a program which uses the readline library starts up, inputrc is read and executed.
+#   Search for 'READLINE' in bash man page or visit https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
+
+#   There are only a few basic constructs allowed in the readline initialization file.  
+#     Blank lines are ignored.
+#     Lines beginning with a # are comments.
+#     Lines beginning with a $ indicate conditional constructs.
+#     Other lines denote key bindings and variable settings.
+
+# -- Readline Variables --
+set colored-stats on
+set editing-mode vi
+# set bell-style visible
+# set colored-completion-prefix on
+# set completion-ignore-case on
+# set completion-map-case on
+# set show-mode-in-prompt on
+
+
+# Keybindings
+"\e[3~": delete-char
+"\C-x\C-x": exchange-point-and-mark
+"\M-w": copy-region-as-kill
+bind -m vi"\C-l": clear-screen
+
+# " ": magic-space
+
+
+# NOTES
+# Use `bind -p` to get a list of the current keymap's keybindings.
+# Use `bind -m` to refer to a specific keymap (e.g. `bind -m emacs -p).
+# Unbound commands are commented out (#).
+
+# "\x7f": backward-delete-char  # Keybinding using hex value of an 8-bit character (ascii man page)
+# `set -o vi` set option sets keybinding to vim insert mode.
+
