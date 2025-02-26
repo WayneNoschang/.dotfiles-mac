@@ -2,7 +2,7 @@
 # Place this file in either ~/.gitconfig or ~/.config/git/config.
 # https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 [core]
-	editor = vim
+
 [user]
 	name = WayneNoschang
 	email = 43730526+WayneNoschang@users.noreply.github.com

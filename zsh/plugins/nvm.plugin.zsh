@@ -16,7 +16,7 @@
 export NVM_DIR="$USER_BUILDS_HOME/nvm"                     # Custom nvm directory
 export NVM_COMPLETION=true                                 # Bash completions for nvm
 export NVM_LAZY_LOAD=true                                  # Lazy loading, improves shell performance
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')               # Extra commands to trigger lazy loading
+# export NVM_LAZY_LOAD_EXTRA_COMMANDS=('')                 # Extra commands to trigger lazy loading
 # export NVM_NO_USE=true                                   # Don't autoload node, requires manually running `nvm use <version>` before using node
 export NVM_AUTO_USE=true                                   # Autoload/install required node version when entering a directory with an .nvmrc
 

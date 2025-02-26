@@ -1,7 +1,7 @@
 # Zsh options: `man zshoptions`
 
 # -- Changing Directories --
-setopt auto_cd       # If command issued is a directory, perform the cd command to that directory.
+# (See ./filesystem.zsh)
 
 # -- Completion --
 
@@ -14,13 +14,12 @@ unsetopt case_glob  # Make globbing (filename generation) case insensitive.
 # -- Initialization --
 
 # -- Input/Output --
-setopt flow_control      # Pause terminal i/o (Ctrl-S) and resume (Ctrl-Q) commands with long output (e.g. `\ls -R`).
-setopt ignore_eof        # Don't exit on end-of-file (Ctrl-D), exits on ten consecutive EOFs anyway.
-unsetopt correct         # Don't try to correct the spelling of commands.
+# (See ./io.zsh)
 
 # -- Job Control --
 
 # -- Prompting --
+# (See ./prompt.zsh)
 
 # -- Scripts and Functions --
 

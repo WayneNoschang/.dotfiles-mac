@@ -17,12 +17,13 @@ brew update              # Update Homebrew recipes
 brew tap homebrew/bundle # Install dependencies with bundle (See Brewfile)
 brew bundle              # Bundle packages in adjacent Brewfile
 
-[[ -d $HOME/.local/share ]] || mkdir -p $HOME/.local/share   # XDG_DATA_HOME
-[[ -d $HOME/.local/state ]] || mkdir -p $HOME/.local/state   # XDG_STATE_HOME
-[[ -d $HOME/.config ]] || mkdir -p $HOME/.config             # XDG_CONFIG_HOME
-[[ -d $HOME/.cache ]] || mkdir -p $HOME/.cache               # XDG_CACHE_HOME
-[[ -d $HOME/.local/builds ]] || mkdir -p $HOME/.local/builds # Cloned repositories
-[[ -d $HOME/.local/bin ]] || mkdir -p $HOME/.local/bin       # Local binary directory
+[[ -d $HOME/.local/share ]] || mkdir -p $HOME/.local/share         # XDG_DATA_HOME
+[[ -d $HOME/.local/state ]] || mkdir -p $HOME/.local/state         # XDG_STATE_HOME
+[[ -d $HOME/.config ]] || mkdir -p $HOME/.config                   # XDG_CONFIG_HOME
+[[ -d $HOME/.cache ]] || mkdir -p $HOME/.cache                     # XDG_CACHE_HOME
+[[ -d $HOME/.local/builds ]] || mkdir -p $HOME/.local/builds       # Cloned repositories
+[[ -d $HOME/.local/languages ]] || mkdir -p $HOME/.local/languages # Programming languages
+[[ -d $HOME/.local/bin ]] || mkdir -p $HOME/.local/bin             # Local binary directory
 
 # --- Zsh ---
 

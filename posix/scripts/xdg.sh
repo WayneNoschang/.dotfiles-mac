@@ -9,8 +9,9 @@ export XDG_CACHE_HOME="$HOME/.cache"       # Non-essential and re-creatable data
 
 # --- Additional directories ---
 
-PATH="$HOME/.local/bin:$PATH"                 # Add local binary folder to PATH
-export USER_BUILDS_HOME="$HOME/.local/builds" # Contains packages built from source (i.e. plugins/packages without brew support).
+PATH="$HOME/.local/bin:$PATH"                       # Add local binary folder to PATH
+export USER_BUILDS_HOME="$HOME/.local/builds"       # Contains packages built from source (i.e. plugins/packages without brew support).
+export USER_LANGUAGES_HOME="$HOME/.local/languages" # Directory for programing languages
 
 export USER_INTERACTIVE_HOME="$HOME/.config/shell/interactive"  # Scripts to be sourced within interactive (rc) files.
 export USER_SCRIPTS_HOME="$HOME/.config/shell/scripts"          # Scripts to be sourced on any shell invocation.

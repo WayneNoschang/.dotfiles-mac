@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export BASH_IT="$USER_BUILDS_HOME/bash_it" # Path to the bash it configuration
-export BASH_IT_THEME=''                    # Lock and Load a custom theme file, location: /.bash_it/themes/
+export BASH_IT_THEME='oh-my-posh'          # Lock and Load a custom theme file, location: /.bash_it/themes/
 
 # THEME_CHECK_SUDO='true'                     # Some themes can check every prompt to show whether `sudo` has a current token or not.
 # export BASH_IT_REMOTE='bash-it'             # (Advanced): Name of bash-it remote repo cloned with a remote other than origin.

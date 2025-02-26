@@ -11,42 +11,59 @@ then
   source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 
+# # Commands
+# ZSH_HIGHLIGHT_STYLES[arg0]=fg=4,bold  # blue
+# ZSH_HIGHLIGHT_STYLES[command]=fg=4,bold
+# ZSH_HIGHLIGHT_STYLES[builtin]=fg=4,bold
+# ZSH_HIGHLIGHT_STYLES[precommand]=fg=4,bold
+# ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=4
+# ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=4
+# 
+# # Syntax
+# ZSH_HIGHLIGHT_STYLES[default]=fg=none
+# ZSH_HIGHLIGHT_STYLES[assign]=fg=none
+# ZSH_HIGHLIGHT_STYLES[comment]=fg=none
+# ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=none
+# ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=none
+# ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=none
+# ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=7  # gray
+# ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=1  # red
+# 
+# # Expansion
+# ZSH_HIGHLIGHT_STYLES[globbing]=fg=4,bold  # blue
+# ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=4,bold
+# ZSH_HIGHLIGHT_STYLES[arithmetic-expansion]=fg=4
+# 
+# # Substitution
+# ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=13  # bright-magenta
+# ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=13
+# ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=13,bold
+# 
+# # Quoting
+# ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=12  # bright-blue
+# ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=12
+# ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=12
+# ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=12
+# ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=12
+# ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=8  # gray
+# ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=8
+# 
+# # Redirection
+# ZSH_HIGHLIGHT_STYLES[redirection]=fg=9  # bright-red
+# ZSH_HIGHLIGHT_STYLES[named-fd]=fg=9
+# ZSH_HIGHLIGHT_STYLES[numeric-fd]=fg=9
+# 
+# # User Commands
+# ZSH_HIGHLIGHT_STYLES[function]=fg=5  # magenta
+# ZSH_HIGHLIGHT_STYLES[alias]=fg=4  # blue
+# ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=none
+# ZSH_HIGHLIGHT_STYLES[global-alias]=fg=none
 
-# --- Parameters ---
-
-# Styles:
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=4,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=4,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=4,bold
-ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=5
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=none
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=1
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=blue
-
-# Style options:
-# ZSH_HIGHLIGHT_STYLES[process-substitution]=none                       # ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
-# ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold                       
-# ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none                       # ZSH_HIGHLIGHT_STYLES[named-fd]=none
-# ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue                                # ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
-# ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none                       # ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
-# ZSH_HIGHLIGHT_STYLES[default]=none                                    # ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-# ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=magenta       # ZSH_HIGHLIGHT_STYLES[cursor]=standout
-# ZSH_HIGHLIGHT_STYLES[redirection]=fg=yellow                           # ZSH_HIGHLIGHT_STYLES[commandseparator]=none
-# ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold                           # ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
-# ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=magenta       # ZSH_HIGHLIGHT_STYLES[command-substitution]=none
-# ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout                 # ZSH_HIGHLIGHT_STYLES[root]=standout
-# ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=magenta       # ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
-# ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold                   # ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=magenta,bold
-# ZSH_HIGHLIGHT_STYLES[path]=underline                                  # ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
-# ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=cyan             # ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
-# ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=cyan                                # ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
-# ZSH_HIGHLIGHT_STYLES[assign]=none                                     # ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
-# ZSH_HIGHLIGHT_STYLES[path_pathseparator]=path_prefix_pathseparator    # ZSH_HIGHLIGHT_STYLES[line]=precommand
-# ZSH_HIGHLIGHT_STYLES[fg=blue,underline]=reserved-word                 # ZSH_HIGHLIGHT_STYLES[fg=yellow]=global-alias
 
 
 # NOTE:
-# Using code from zsh-users: https://github.com/zsh-users/zsh-syntax-highlighting
+# Highlighters: https://github.com/zsh-users/zsh-syntax-highlighting/tree/master/highlighters
+# Syntax highlighting zsh-users: https://github.com/zsh-users/zsh-syntax-highlighting
 # Changes to ZSH_HIGHLIGHT_STYLES must be made AFTER sourcing the plugin
-# More info about changing highlight colors: https://github.com/zsh-users/zsh-syntax-highlighting/issues/464#issuecomment-352488260

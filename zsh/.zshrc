@@ -37,7 +37,6 @@ if [[ -n "$ZSH_DEBUGRC" ]]; then
   zprof
 fi
 
-
 # NOTES
 
 # Awesome lists

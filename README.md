@@ -13,13 +13,14 @@ Currently a work in progress...
 - [Awesome CLI apps](https://github.com/agarrharr/awesome-cli-apps)
 - [Terminals are sexy](https://github.com/k4m4/terminals-are-sexy)
 - [Modern Unix](https://github.com/ibraheemdev/modern-unix)
-- [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
-- [Dotfyle](https://dotfyle.com/)
 
 ### Components
 - Terminal emulator: [iTerm2](https://iterm2.com/)
 - Shell: [Zsh](https://zsh.sourceforge.io/)
-- Code editor: [Neovim](https://neovim.io/)
 
 ### Extras
 - Useful tools for generating ASCII [Art](https://www.asciiart.eu/), [Fonts](https://patorjk.com/software/taag) and [Tables](https://github.com/ozh/ascii-tables)
+### POSIX Resources
+[POSIX Documentation](https://pubs.opengroup.org/onlinepubs/9799919799/nframe.html)
+[ShellCheck](https://www.shellcheck.net/)
+

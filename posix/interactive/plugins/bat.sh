@@ -8,11 +8,11 @@
 export BAT_CONFIG_DIR="$XDG_CONFIG_HOME/bat"
 
 # Dark/light mode: https://github.com/sharkdp/bat?tab=readme-ov-file#dark-mode
-if defaults read -globalDomain AppleInterfaceStyle &> /dev/null; then
-  export BAT_THEME="primer"
-else
-  export BAT_THEME="primer-light"
-fi
+# if defaults read -globalDomain AppleInterfaceStyle >/dev/null 2>&1; then
+#   export BAT_THEME="modus"
+# else
+#   export BAT_THEME="modus-light"
+# fi
 
 # NOTES:
 # Use `\bat cache --build` when building cache. The backslash escape character negates aliases

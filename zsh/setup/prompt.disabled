@@ -1,0 +1,37 @@
+# Zsh prompt configuration
+
+# -- Options --
+setopt prompt_subst
+# setopt transient_rprompt
+
+# -- Parameters --
+# PS1  # Default '%n@%m %1~ %# '
+# RPS1
+
+
+# PS2  # Default '%_>'
+# RPS2
+
+# PROMPT_EOL_MARK
+# SPROMPT  # Default 'zsh: correct '%R' to '%r' [nyae]?'
+
+# TIMEFMT  # Format for output from time built-in.
+# WATCHFMT  # Format for ouput info on logins/logouts.
+
+# PS3  # Prompt for select command
+
+PS4='+%N:%i:%_>' # (p. 152) Prompt for debugging with `xtrace option` (discussed in Chapter 13).
+
+
+
+# NOTE
+# Zsh prompt expansion: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+# Zsh prompting intro: https://zsh.sourceforge.io/Intro/intro_14.html
+
+# Pure prompt: https://github.com/sindresorhus/pure
+# Oh-My-Zsh themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+
+# See strftime man page for character options.
+# Use ZLE_RPROMPT_INDENT if right prompt is not lining up.
+# Use `autoload -U promptinit` for Zsh prompt ideas.

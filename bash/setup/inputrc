@@ -14,7 +14,7 @@
 
 # -- Readline Variables --
 set colored-stats on
-# set editing-mode vi
+set editing-mode vi
 # set bell-style visible
 # set colored-completion-prefix on
 # set completion-ignore-case on
@@ -26,7 +26,7 @@ set colored-stats on
 "\e[3~": delete-char
 "\C-x\C-x": exchange-point-and-mark
 "\M-w": copy-region-as-kill
-"\C-l": clear-screen
+bind -m vi"\C-l": clear-screen
 
 # " ": magic-space
 
@@ -37,3 +37,5 @@ set colored-stats on
 # Unbound commands are commented out (#).
 
 # "\x7f": backward-delete-char  # Keybinding using hex value of an 8-bit character (ascii man page)
+# `set -o vi` set option sets keybinding to vim insert mode.
+

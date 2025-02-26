@@ -19,7 +19,7 @@ export SAVEHIST=1500  # Number of lines saved in $HISTFILE.
 # `fc -Ll` - # Get internal and file history but not from other shells.
 # `fc -l` -  # Get all history info, same as `history` command.
 
-# Use $EDITOR to write/edit a command in history.
+# How to use $EDITOR to write/edit a command in history:
 # autoload -U edit-command-line       # Load function
 # zle -N edit-command-line            # Create widget for function
 # bindkey -a "^[e"  edit-command-line # Bind key to widget

@@ -1,13 +1,19 @@
 #!/usr/bin/env $SHELL
 
-set -o vi        # Set keybinding to vim insert mode.
+# -- Expansion and Globbing --
+shopt -s nocaseglob # Make globbing (filename expansion) case insensitive.
+
+# -- Input/Output --
 set -o ignoreeof # An interactive shell will not exit upon reading EOF (Ctrl-D).
 
 # -- Changing Directories --
-shopt -s autocd # If command issued is a directory, perform the cd command to that directory.
+# (See ./filesystem.bash)
 
-# -- Expansion and Globbing --
-shopt -s nocaseglob # Make globbing (filename expansion) case insensitive.
+# -- History --
+# (See ./history.bash)
+
+# -- Prompting --
+# (See ./prompt.bash)
 
 # NOTE
 
